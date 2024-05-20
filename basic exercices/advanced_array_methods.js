@@ -21,6 +21,8 @@ const doubleMap = (numbers) => {
 console.log(doubleMap([1, 2, 3]))   // prints [2,4,6]
 
 
+
+//FILTER
 // a filter function manually created
 const filter = (numbers, greaterThan) => {
     let newArray = []
@@ -59,18 +61,28 @@ let actorsFiltered = actors.filter(actor => actor.netWorth > 500)
 console.log(actorsFiltered)
 
 let names = actorsFiltered.map(actor => actor.name).join(', ') //join separeted by , the names of the objects
-
-
-playground.innerHTML = `<h1>${names}</h1>`; //it will appear in the html tag with 'playground' id
-
-
-console.log(actors.reduce((prev, curr) => prev + curr.netWorth, 0))
+// playground.innerHTML = `<h1>${names}</h1>`; //this only works when running the html
 
 
 
-//reduce 
+//REDUCE
+//reduce takes in a function as an argument
+//it loops and gives you back the accumulator
+
+console.log(actors.reduce((prev, curr) => prev + curr.netWorth, 0)) //sum the networths, prev = 0 at the start
 
 
+// function sum(a, b){
+//   return a + b;
+// }   
+
+// IS THE SAME AS:
+const sum = (a, b) => a+b;
 
 
+const nums = [1,2,3,4];
+const resultReduce = nums.reduce((prev, curr) => prev * curr); //24
+console.log(resultReduce) 
 
+const reduceTest = nums.reduce(sum); //10
+console.log(reduceTest) 

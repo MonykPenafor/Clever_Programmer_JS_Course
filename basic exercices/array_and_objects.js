@@ -1,4 +1,4 @@
-//run 'node playground.js' in the terminal
+//run 'node file-name.js' in the terminal
 
 // how many letters there is in a string (1 by 1)
 const letterCounter = () => {
